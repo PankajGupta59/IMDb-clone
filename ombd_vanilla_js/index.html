@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>OMDb search - MyIMDB Clone</title>
+	<!-- Import free Google fonts -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:700&text=OMDb&display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Source+Sans+Pro:400,700&display=swap">
+	<!-- Fontawesome BootstrapCDN -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css" rel="stylesheet">
+	<!-- My Stylesheet -->
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<!-- The main wrapper for all content -->
+	<div id="main" class="main">
+		<nav>
+			<div class="logo">
+				<span>IMDb</span>
+			</div>
+
+			<div class="navbar">
+
+				<div class="nav-top">
+					<form class="search-form" action="">
+						<input type="search" name="search-box" id="search-box" placeholder="Find Movies, TV Shows and more...">
+						<select name="search-type" id="search-type">
+							<option value="all">All</option>
+							<option value="titles">Titles</option>
+							<option value="episode">TV Episodes</option>
+							<option value="series">Series</option>
+							<option value="imdbs">IMDb IDs</option>
+							<option value="advsearch">AdvancedSearch>></option>
+						</select>
+						<button type="submit" id="search-start">
+							<i class="fas fa-search"></i>
+						</button>
+					</form> <!-- search-form -->
+
+					<div class="nav-top-other">
+						<span>IMDbPro</span>
+						<a href="#">HELP</a>
+						<div class="socials">
+							<a href="#"><i class="fab fa-facebook-f"></i></a>
+							<a href="#"><i class="fab fa-instagram"></i></a>
+							<a href="#"><i class="fab fa-twitch"></i></a>
+							<a href="#"><i class="fab fa-twitter"></i></a>
+							<a href="#"><i class="fab fa-youtube"></i></a>
+						</div> <!-- socials -->
+					</div> <!-- nav-top-other -->
+				</div> <!-- nav-top -->
+		</nav> <!-- nav -->
+
+		<!-- This contains some information before the user has sublitted a search -->
+		<div id="startup"></div>
+
+		<!-- This gets populated after the user has commited the search -->
+		<div id="results"></div>
+
+		<!-- The list of search results that pops up as soon as some results came back -->
+		<div id="realtime-search" class="realtime-search hidden"></div>
+
+		<footer>
+			<div class="footer-infos">
+				<div class="btm-mobile">
+					<h3>IMDb Everywhere!</h3>
+					<img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-example-preferred.png" alt="AppStore Logo">
+					<img src="https://play.google.com/intl/en_us/badges/images/badge_new.png" alt="Google Play logo">
+					<img src="" alt="">
+					<p>Find showtimes, watch trailers, browse photos, track your Watchlist and rate your favorite movies and TV shows on your phone or tablet!</p>
+				</div>
+				<div class="btm-socials">
+					<h3>Follow IMDb on</h3>
+					<a href="#"><i class="fab fa-facebook-f"></i></a>
+					<a href="#"><i class="fab fa-instagram"></i></a>
+					<a href="#"><i class="fab fa-twitch"></i></a>
+					<a href="#"><i class="fab fa-twitter"></i></a>
+					<a href="#"><i class="fab fa-youtube"></i></a>
+				</div>
+				<div class="btm-links">
+					<a href="#" target="_blank" rel="noopener noreferrer">Home</a>
+					<a href="#" target="_blank" rel="noopener noreferrer">Top Rated Movies</a>
+					<a href="#" target="_blank" rel="noopener noreferrer">Box Office</a>
+					<a href="#" target="_blank" rel="noopener noreferrer">Coming Soon</a>
+					<a href="#" target="_blank" rel="noopener noreferrer">Site Index</a>
+					<a href="#" target="_blank" rel="noopener noreferrer">In Theaters</a>
+				</div>
+			</div> <!-- footer-infos-->
+
+			<div class="copyrights">
+				<p>No Copyrights! Made as an exercise by <a href="http://github.com/dmilojkovic76">dmilojkovic76</a></p>
+				<p>All credits for API go to <a href="http://www.omdbapi.com/">IMDb API</a> licenced under <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0.</a></p>
+				<p>This site is not endorsed by or affiliated with <a href="https://www.imdb.com/">IMDb.com</a> or <a href="http://www.omdbapi.com/">IsMDb API.com</a>.</p>
+			</div>
+		</footer>
+	</div> <!-- main -->
+
+
+	<script src="app.js"></script>
+</body>
+</html>
